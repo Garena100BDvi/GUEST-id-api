@@ -35,7 +35,7 @@ REGION_URLS = {
     "VN": "https://clientbp.ggblueshark.com/",
     "TH": "https://clientbp.common.ggbluefox.com/",
     "RU": "https://clientbp.ggblueshark.com/",
-    "BD": "https://clientbp.ggblueshark.com/",
+    "BD": "https://clientbp.ggpolarbear.com/",
     "PK": "https://clientbp.ggblueshark.com/",
     "SG": "https://clientbp.ggblueshark.com/",
     "NA": "https://client.us.freefiremobile.com/",
@@ -158,7 +158,7 @@ def create_acc(region, name_prefix):
 
     url = "https://100067.connect.garena.com/oauth/guest/register"
     headers = {
-        "User-Agent": "GarenaMSDK/4.0.19P8(ASUS_Z01QD ;Android 12;en;US;)",
+        "User-Agent": "GarenaMSDK/4.0.41(SM-A136B ;Android 9;en;US;app 1.123.1 2019120269;)",
         "Authorization": "Signature " + signature,
         "Content-Type": "application/x-www-form-urlencoded",
         "Accept-Encoding": "gzip",
@@ -184,7 +184,7 @@ def token(uid, password, region, name_prefix):
         "Connection": "Keep-Alive",
         "Content-Type": "application/x-www-form-urlencoded",
         "Host": "100067.connect.garena.com",
-        "User-Agent": "GarenaMSDK/4.0.19P8(ASUS_Z01QD ;Android 12;en;US;)",
+        "User-Agent": "GarenaMSDK/4.0.41(SM-A136B ;Android 9;en;US;app 1.123.1 2019120269;)",
     }
 
     body = {
@@ -246,7 +246,7 @@ def Major_Regsiter(access_token, open_id, field, uid, password, region, name_pre
         "Content-Type": "application/x-www-form-urlencoded",
         "Expect": "100-continue",
         "Host": "loginbp.ggblueshark.com",
-        "ReleaseVersion": "OB52",
+        "ReleaseVersion": "OB53",
         "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 9; ASUS_I005DA Build/PI)",
         "X-GA": "v1 1",
         "X-Unity-Version": "2018.4.11f1"
@@ -288,7 +288,7 @@ def chooseregion(data_bytes, jwt_token):
         'Authorization': f"Bearer {jwt_token}",
         'X-Unity-Version': "2018.4.11f1",
         'X-GA': "v1 1",
-        'ReleaseVersion': "OB52"
+        'ReleaseVersion': "OB53"
     }
     try:
         session = get_session()
@@ -310,7 +310,7 @@ def login(uid, password, access_token, open_id, response_hex, status_code, name,
         "Content-Type": "application/x-www-form-urlencoded",
         "Expect": "100-continue",
         "Host": "loginbp.ggblueshark.com",
-        "ReleaseVersion": "OB52",
+        "ReleaseVersion": "OB53",
         "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 9; ASUS_I005DA Build/PI)",
         "X-GA": "v1 1",
         "X-Unity-Version": "2018.4.11f1"
@@ -388,7 +388,7 @@ def login_server(uid, password, access_token, open_id, response, status_code, na
         "Content-Type": "application/x-www-form-urlencoded",
         "Expect": "100-continue",
         "Host": "loginbp.ggblueshark.com",
-        "ReleaseVersion": "OB52",
+        "ReleaseVersion": "OB53",
         "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 9; ASUS_I005DA Build/PI)",
         "X-GA": "v1 1",
         "X-Unity-Version": "2018.4.11f1"
@@ -463,14 +463,14 @@ def get_available_room(input_text):
 def GET_LOGIN_DATA(JWT_TOKEN, PAYLOAD, region):
     link = get_region_url(region)
     if not link:
-        link = "https://clientbp.ggblueshark.com/"
+        link = "https://clientbp.ggpolarbear.com/"
     url = f"{link}GetLoginData"
     headers = {
         'Expect': '100-continue',
         'Authorization': f'Bearer {JWT_TOKEN}',
         'X-Unity-Version': '2018.4.11f1',
         'X-GA': 'v1 1',
-        'ReleaseVersion': 'OB52',
+        'ReleaseVersion': 'OB53',
         'Content-Type': 'application/x-www-form-urlencoded',
         'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 10; G011A Build/PI)',
         'Host': 'clientbp.common.ggblueshark.com',
